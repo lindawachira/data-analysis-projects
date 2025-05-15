@@ -20,18 +20,18 @@ GDP growth rate overtime
 - **Oceania** recorded a **GDP growth rate of +1.6% in 2020**, while most other regions experienced negative growth due to the COVID-19 pandemic.
 
 - The **global average GDP growth rate** dropped to **2.2% in 2020**, but bounced back to **5.63% in 2021** post-pandemic.
-  ![2020 Global Overview](Images/2020%STATS.PNG)
+  ![2020 Global Overview](Images/2020_stats.PNG)
 
 ### 🌍 Africa Regional Focus
 
 - Africa has had a **steady increase in real GDP**, with an **average growth rate of 3.53%**, second only to Asia.
-  ![Africa Overview](Images/Africa%25region%o25verview.PNG)
+  ![Africa Overview](Images/Africa_overview.PNG)
 - It experienced a **-2.4% growth rate in 2020**, but recovered to **5.4% in 2021**.
-  ![Africa 2020](Images/2020%25region%25stats.PNG)
+  ![Africa 2020](Images/2020_region_stats.PNG)
 - 
 - **Sub-Saharan Africa** leads slightly with an average growth rate of **3.6%** from 1995 to 2022, thanks to resource-rich countries and emerging markets.
 - **North Africa** surpassed Sub Saharan Africa in **2021 by 2.8%**, likely due to tourism rebound and improved political stability in key countries.
-  ![Africa 2021](Images/2021%25African%25region%25stats.PNG)
+  ![Africa 2021](Images/2021_region_stats.PNG)
 - **North Africa** leads in **GDP per capita**, given its relatively smaller population sizes and better economic diversity.
 
 ---
@@ -46,12 +46,12 @@ GDP growth rate overtime
 - 2020 – **Burkina Faso**: 13%
 - 2021 – **Libya**: 28.3% *(oil recovery post-conflict)*
 - 2022 – **Cabo Verde**: 17.7% *(tourism and remittances)*
- ![Top GDP growth rate performers](Images/growth%25rate%25country%25overview.PNG)
+ ![Top GDP growth rate performers](Images/growth_rate_country.PNG)
 
 #### 🌟 2022 Standouts:
 - **Nigeria** leads in **real GDP**.
 - **Seychelles** tops in **GDP per capita**
-![Top 5 in Real GDP overtime](Images/real%25gdp%25country%25overview.PNG)
+![Top 5 in Real GDP overtime](Images/real_gdp_country_overview.PNG)
 
 ---
 
