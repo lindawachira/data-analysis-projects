@@ -46,7 +46,6 @@ GDP growth rate overtime
 - 2020 – **Burkina Faso**: 13%
 - 2021 – **Libya**: 28.3% *(oil recovery post-conflict)*
 - 2022 – **Cabo Verde**: 17.7% *(tourism and remittances)*
- ![Top GDP growth rate performers](Images/growth_rate_country.PNG)
 
 #### 🌟 2022 Standouts:
 - **Nigeria** leads in **real GDP**.
