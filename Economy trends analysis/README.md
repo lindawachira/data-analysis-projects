@@ -8,6 +8,7 @@ This project explores trends in GDP metrics across countries, regions, subregion
 
 ### 🌐 Global Overview
 The charts below show the global average stats in each metric between 1995-2022:
+GDP growth rate overtime
   ![GDP growth rate overtime](Images/global_growth_rate_trend.PNG)
 
 - **Asia** leads in **average real and nominal GDP**, with an **average growth rate of 4.8%**, driven by strong export-based economies like **China**, **India**, and **Japan**.
