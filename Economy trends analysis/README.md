@@ -19,7 +19,7 @@ GDP growth rate overtime
 
 - **Oceania** recorded a **GDP growth rate of +1.6% in 2020**, while most other regions experienced negative growth due to the COVID-19 pandemic.
 
-- The **global average GDP growth rate** dropped to **2.2% in 2020**, but bounced back to **5.63% in 2021** post-pandemic.
+- The **global average GDP growth rate** dropped to **2.2% in 2020**, but bounced back to **5.9% in 2021** post-pandemic.
   ![2020 Global Overview](Images/2020_stats.PNG)
 
 ### 🌍 Africa Regional Focus
