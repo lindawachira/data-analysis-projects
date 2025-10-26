@@ -62,8 +62,8 @@ The dataset was a denormalized table containing the following:
   3. **Data Transformation** Used Power BIs power query editor to transform these tables into workable formats for visualization, and DAX measures for structuring KPIs.
 
 ### Dashboard
-![Overview](Images/overview.png) ![Customer Demographics](Images/demographics.png)![Products Performance Analysis](Images/products.png)
-![Campaigns Effectiveness Analysis](Images/campaigns.png) ![Channel Performance Analysis](Images/channelsw.png)
+**Overview**![Overview](Images/overview.png) **Customer Demographics**![Customer Demographics](Images/demographics.png) **Products Performance Analysis**![Products Performance Analysis](Images/products.png)
+**Campaigns Effectiveness Analysis**![Campaigns Effectiveness Analysis](Images/campaigns.png) **Channel Performance Analysis**![Channel Performance Analysis](Images/channels.png)
 ## Analysis & Insights
 
 ### A. Customer Demographics: Core Buyer Persona
