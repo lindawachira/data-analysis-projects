@@ -33,7 +33,7 @@ I have identified that the company’s growth is constrained not by lack of cust
 - **Campaign Inefficiency:** 72% of customers do not accept any campaigns, representing a massive revenue leakage. Success is possible, as the "Recent Campaign" proved(311 customers traction), but it has to be  systematically replicated.
 - **Channel Opportunity:** Online channels have become the primary sales driver, with the web purchases being a key driver but under-optimized asset. This category peaks at 6-8 monthly visits. Store purchases are still leading with 54%(11.7K) in purchases.
 
-## 3. Strategic Recommendations & Implementation
+## Strategic Recommendations & Implementation
 ### 1. Where should we focus to maximize marketing ROI?
 The highest-value customers are **55+ and highly educated (Masters/PhD)**, with an Average Order Value (AOV) over $250 and campaign conversion rates exceeding 30%. However, 72% of your customer base is unresponsive to campaigns, indicating a major targeting inefficiency.
 -	For customers 55+ and with advanced degrees. Offer exclusive products and early access.
