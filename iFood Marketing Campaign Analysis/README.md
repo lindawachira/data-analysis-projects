@@ -16,6 +16,7 @@ I have identified that the company’s growth is constrained not by lack of cust
 -	Average Order Value(AOV)
 -	Conversion rate
 -	Frequency
+  
 **Dimensions**
 -	Customer Demographics (Age, Income, Education, Marital Status)
 -	Product Categories (Wine, Meat, Gold, etc.)
