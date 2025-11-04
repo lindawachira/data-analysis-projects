@@ -1,7 +1,27 @@
-### Heyyy...thank you for coming this far 👋
+# Hello and Welcome!
 
-This repository carries projects that I have worked on across different domains.
+This repository is a testament to a simple belief: a great analyst is defined not by pre-existing domain knowledge, but by the ability to learn it quickly and thoroughly. Here, you'll find my journeys into diverse fields—from **finance** and **marketing**, and more...where I've applied a structured, analytical approach to uncover insights and drive decisions.
 
-While I may not have deep domain expertise in every industry, I’ve developed strong research skills that allow me to quickly understand the context of any dataset I work with. This adaptability has enabled me to analyze data across various domains—from economics to public health—and still extract meaningful, accurate, and actionable insights.
+Each project is a case study in connecting data to context. I start with the fundamentals: understanding the problem, asking pointed questions, and rigorously cleaning and exploring the data. The result is a portfolio that demonstrates not just technical proficiency in **Power BI, SQL, and DAX**, but also the strategic thinking to know what to build and why.
 
-I believe that good data analysis is driven not only by technical skills, but also by the ability to ask the right questions and dig into the surrounding context when needed.
+## 🚀 What to Expect Here
+
+- **End-to-End Analysis:** From data cleaning and preparation to visualization and storytelling
+- **Domain Diversity:** Projects spanning multiple industries and business functions
+- **Actionable Insights:** Clear, business-focused recommendations backed by data
+- **Technical Diligence:** Clean code, well-documented processes, and reproducible results
+
+## 📂 Featured Projects
+
+### [Loan Portfolio Risk Analytics](/loan-portfolio-risk-analytics)
+A deep dive into a $318M loan portfolio identifying risk drivers and profitability opportunities through advanced segmentation and predictive insights.
+
+### [Marketing Campaign Analysis](/marketing-campaign-analysis)
+Customer behavior analysis and campaign optimization strategies to improve ROI and customer engagement across multiple channels.
+
+## 🛠️ Core Competencies
+
+- **Data Analysis:** SQL, Excel, Power Query
+- **Data Visualization:** Power BI, DAX
+- **Statistical Analysis:** Correlation, Trend Analysis, Segmentation
+- **Business Intelligence:** KPI Development, Dashboard Design, Executive Reporting
