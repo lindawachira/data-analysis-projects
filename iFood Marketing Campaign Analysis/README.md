@@ -65,4 +65,4 @@ iFood possesses a valuable, loyal customer base. The path to increased ROI lies 
 **Tools Used:** MySQL, Power BI  
 **Dataset Source:** Kaggle iFood Marketing Campaign Dataset
 
-View the [Interactive Dashboard]([https://app.powerbi.com "Power BI Report](https://app.powerbi.com/links/y66jXWZ08A?ctid=96a40b0f-fcc0-4cb4-bc02-7dabbfbb6a62&pbi_source=linkShare)") for full details.
+View the [Interactive Dashboard](https://app.powerbi.com/links/y66jXWZ08A?ctid=96a40b0f-fcc0-4cb4-bc02-7dabbfbb6a62&pbi_source=linkShare) for full details.
