@@ -61,5 +61,3 @@ If this project continued, the natural next phase would be:
 ![Dashboard](Images/Dashboard-Overview.png)
 
 View the [Interactive Dashboard](https://docs.google.com/spreadsheets/d/1zkZeoebZ_qmq8S4wVrcSS0pf5PLAVQqH/edit?usp=sharing&ouid=111629934103608692324&rtpof=true&sd=true) for full details.
-
-View the [Presentation Slides](PASTE_LINK_OR_FILE_PATH_HERE) for full details.
