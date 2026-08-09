@@ -16,7 +16,7 @@ Retail businesses grow revenue by selling more, but only make money when what th
 3. Write SQL queries to calculate profit margin, discount impact, and customer value (RFM), then bring those results into Power BI to compare them against raw sales performance and find where growth and profitability were diverging.
 
 ## Skills
-**MySQL:** Query writing, joins, window functions, data cleaning, schema design
+**MySQL:** Query writing, joins, window functions, data cleaning, schema design([SCRIPT HERE](https://github.com/lindawachira/data-analysis-projects/blob/main/Sales%20%26%20Profit%20Performance%20Analytics/sql%20script.sql))
 
 **Power BI:** DAX, dashboard development, data visualization, data modeling
 
