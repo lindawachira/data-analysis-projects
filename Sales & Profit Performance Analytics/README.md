@@ -51,7 +51,8 @@ Average order value declined nearly every year, from $499 in 2014 to $435 in 201
 → *Recommendation:* Introduce upsell and bundling prompts at checkout to lift order size, rather than relying on order volume alone to drive growth.
 
 ## Next Steps
-If this project continued, the next steps I would take would be:
-- Initiating the 20% discount cap on one region first, to confirm losses drop without also suppressing sales volume
-- Investigating whether the 2017 margin dip was driven by regional or category mix shifts, rather than discounting alone
-- Extending the analysis to shipping lead time and return rate, to check whether slow fulfillment is contributing to lost repeat business
+This dataset has more to offer beyond sales and profit performance. Rather than folding every angle into this one project, I plan to explore them as separate, focused analyses having each answer the kind of question a different department would actually ask like:
+-Looking at how long orders take to ship and whether slow or inconsistent delivery is quietly costing us repeat business
+-Modeling the revenue and profit impact of enforcing a firm discount cap before any sales are made.
+-Extending the RFM segmentation into an actual win-back campaign performance analysis
+Each of these will live as its own project linked back here so the dataset can be explored the way a real business would.
