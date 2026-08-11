@@ -1,7 +1,7 @@
 # Sales & Profit Performance Analytics: Northgate Retail Supply Co..
 
 ## Executive Summary
-Sales had been climbing year over year, but leadership couldn't say with confidence which regions, reps, or products were actually driving profit rather than just revenue. Using MySQL and Power BI, I cleaned and normalized four years of order data and built a dashboard to track sales, profit, and discounting behavior across every region, category, and rep. After finding that one product category was quietly losing money at scale, that discounts past a specific threshold reliably erased profit, and that a third of the customer base — over $1M in historical revenue — was at risk of churn, I recommend the following adjustments:
+Sales had been climbing year over year, but leadership couldn't say with confidence which regions, reps, or products were actually driving profit rather than just revenue. Using MySQL and Power BI, I cleaned and normalized four years of order data and built a dashboard to track sales, profit, and discounting behavior across every region, category, and rep. After finding that one product category was quietly losing money at scale, that discounts past a specific threshold reliably erased profit, and that a third of the customer base holding over $1M in historical revenue was at risk of churn, I recommend the following adjustments:
 
 1. Cap discounts at 20% company-wide, with approval required above that line
 2. Reprice or discontinue the two Furniture sub-categories operating at a loss
