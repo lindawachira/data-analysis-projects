@@ -53,4 +53,4 @@ Average order value declined nearly every year, from $499 in 2014 to $435 in 201
 ## Next Steps
 This dataset has more to offer beyond sales and profit performance. Rather than folding every angle into this one project, I plan to explore them as separate, focused analyses having each answer the kind of question a different department would actually ask like looking at how long orders take to ship, and whether slow delivery or high return rates in certain categories are quietly costing us repeat business. Each project linked to this one will be linked back here so the dataset can be explored the way a real business would.
 
-[Sale & Profits Analytics Dashboard](Images/Dashboard.png)
+![Sale & Profits Analytics Dashboard](Images/Dashboard.png)
