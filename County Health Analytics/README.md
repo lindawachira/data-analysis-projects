@@ -22,6 +22,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 - Flagged implausible Gender/Age vs. Disease combinations, since "fixing" fabricated data would misrepresent the analysis as more reliable than it is.
 
 **2. Exploratory & Descriptive Analysis**
+**Tools used:** Microsoft Excel (PivotTables, PivotCharts, Power Query)
 ### Treatment Cost
 - Overall average: **KES 13,290** (range: KES 1,555 – 24,900)
 ![Average Costs](Images/average_costs.png)
@@ -47,7 +48,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 
 ## Recommendations
 
-1. **Strengthen data validation at collection.** Cross-field checks (e.g., Disease vs. Gender/Age logic) would catch entry errors before they reach analysis — critical if this pipeline is later applied to real patient data.
+1. **Strengthen data validation at collection.** Cross-field checks (e.g., Disease vs. Gender/Age logic) would catch entry errors before they reach analysis. This is critical if this pipeline is later applied to real patient data.
 2. **Standardize missing-value conventions** across all fields to avoid undercounting data gaps.
 3. **Investigate the Nakuru cost premium** against case severity mix and facility-level pricing to determine whether it reflects real cost drivers or a data artifact.
 4. **Close the insurance reporting gap** — prioritize capturing insurance status at intake, since it currently limits confidence in any cost-by-coverage analysis.
@@ -56,9 +57,6 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 ---
 
 ## Next Steps
-
-- Extend the analysis window beyond three months to test for genuine seasonal patterns.
-- Build an interactive Power BI/Tableau dashboard for county-level drill-down.
 - If applied to real data, validate against ground-truth clinical records before drawing operational conclusions.
 - Explore age-group segmentation (pediatric / adult / elderly) against disease and outcome for a more granular view.
 
