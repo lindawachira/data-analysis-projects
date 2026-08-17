@@ -1,0 +1,199 @@
+Patient ID,Visit Date,County,Sub County,Facility ID,Gender,Age,Disease,Admission,Treatment Cost,Insurance,Outcome
+P0001,1/8/2026,Nairobi,Westlands,F002,Male,14,Maternal Health,Yes,20849,Private,Recovered
+P0002,3/17/2026,Nairobi,Westlands,F001,Male,72,Pneumonia,No,8723,Private,Recovered
+P0003,2/11/2026,Nairobi,Westlands,F002,Male,28,Diabetes,Yes,4539,Private,Recovered
+P0004,1/26/2026,Kisumu,Nyando,F004,Female,69,Malaria,No,4082,None,Recovered
+P0005,1/23/2026,Machakos,Mwala,F006,Male,85,Pneumonia,No,4114,SHA,Recovered
+P0006,2/21/2026,Nakuru,Nakuru Town,F005,Male,48,Diabetes,Yes,23460,Private,Recovered
+P0007,3/18/2026,Nairobi,Kasarani,F001,Male,21,Hypertension,No,10345,None,Recovered
+P0008,1/27/2026,Kiambu,Kiambu,F003,Male,5,Diabetes,No,10273,SHA,Recovered
+P0009,3/7/2026,Machakos,Machakos Town,F006,Female,51,Maternal Health,No,6181,Private,Recovered
+P0010,3/24/2026,Machakos,Machakos Town,F006,Female,75,Hypertension,No,8686,SHA,Recovered
+P0011,3/5/2026,Nairobi,Westlands,F001,Male,88,Hypertension,Yes,14108,Private,Recovered
+P0012,1/18/2026,Nakuru,Molo,F005,Male,88,Tuberculosis,No,22503,Private,Recovered
+P0013,3/1/2026,Nakuru,Naivasha,F005,Female,65,Pneumonia,Yes,21989,Private,Recovered
+P0014,2/5/2026,Machakos,Machakos Town,F006,Male,70,Tuberculosis,Yes,21126,Private,Recovered
+P0015,1/8/2026,Nairobi,Embakasi,F002,Male,73,Malaria,Yes,17424,SHA,Referred
+P0016,2/22/2026,Machakos,Athi River,F006,Male,34,Tuberculosis,No,8440,None,Recovered
+P0017,3/13/2026,Kiambu,Kiambu,F003,Female,57,Tuberculosis,No,5465,SHA,Recovered
+P0018,1/19/2026,Kisumu,Kisumu East,F004,Male,10,Maternal Health,Yes,9001,SHA,Referred
+P0019,3/9/2026,Kisumu,Kisumu East,F004,Female,28,Malaria,Yes,20211,None,Recovered
+P0020,1/4/2026,Nakuru,Nakuru Town,F005,Female,46,Hypertension,No,16803,None,Recovered
+P0021,2/24/2026,Nairobi,Westlands,F002,Male,32,Pneumonia,Yes,19073,Private,Recovered
+P0022,1/8/2026,Kiambu,Ruiru,F003,Female,71,Malaria,Yes,22869,None,Recovered
+P0023,2/14/2026,Nairobi,Westlands,F001,Female,28,Hypertension,Yes,6894,Private,Recovered
+P0025,1/2/2026,Machakos,Athi River,F006,Female,65,Tuberculosis,Yes,3363,None,Recovered
+P0026,1/22/2026,Kiambu,Thika,F003,Female,16,Tuberculosis,Yes,20470,None,Recovered
+P0027,1/9/2026,Nairobi,Embakasi,F002,Female,31,Diabetes,No,5788,None,Recovered
+P0028,2/1/2026,Nakuru,Nakuru Town,F005,Male,10,Tuberculosis,Yes,18076,Private,Recovered
+P0029,2/12/2026,Kisumu,Kisumu East,F004,Male,57,Tuberculosis,No,12000,None,Recovered
+P0030,2/5/2026,Machakos,Mwala,F006,Male,14,Maternal Health,Yes,10424,Private,Recovered
+P0031,2/17/2026,Kisumu,Kisumu East,F004,Female,7,Malaria,No,10566,SHA,Recovered
+P0032,3/6/2026,Kiambu,Kiambu,F003,Female,71,Maternal Health,No,19879,SHA,Recovered
+P0033,2/27/2026,Kiambu,Kiambu,F003,Male,56,Pneumonia,Yes,11601,Private,Recovered
+P0034,1/22/2026,Nairobi,Embakasi,F001,Male,46,Tuberculosis,No,21837,None,Recovered
+P0035,1/14/2026,Kiambu,Thika,F003,Male,43,Hypertension,Yes,10242,SHA,Recovered
+P0036,2/28/2026,Nairobi,Embakasi,F001,Male,26,Hypertension,No,11500,SHA,Recovered
+P0037,1/9/2026,Kiambu,Ruiru,F003,Female,45,Maternal Health,No,23766,None,Recovered
+P0038,3/6/2026,Nairobi,Westlands,F002,Female,5,Malaria,No,12827,None,Recovered
+P0005,3/13/2026,Nakuru,Molo,F005,Male,33,Malaria,No,1555,None,Referred
+P0040,2/12/2026,Machakos,Machakos Town,F006,Male,86,Diabetes,No,23237,SHA,Recovered
+P0041,2/22/2026,Kisumu,Nyando,F004,Female,52,Maternal Health,No,19666,SHA,Recovered
+P0042,3/20/2026,Nakuru,Molo,F005,Female,52,Tuberculosis,Yes,11457,Private,Recovered
+P0043,2/15/2026,Machakos,Machakos Town,F006,Female,87,Pneumonia,No,7060,None,Recovered
+P0044,1/3/2026,Machakos,Machakos Town,F006,Female,29,Pneumonia,Yes,2300,SHA,Recovered
+P0045,2/15/2026,Nakuru,Molo,F005,Male,90,Hypertension,No,14595,SHA,Recovered
+P0046,1/8/2026,Nairobi,Westlands,F002,Female,7,Tuberculosis,Yes,5476,Private,Recovered
+P0047,2/25/2026,Nakuru,Molo,F005,Female,71,Hypertension,Yes,17054,Private,Recovered
+P0048,3/25/2026,Kiambu,Kiambu,F003,Female,81,Pneumonia,No,15913,SHA,Recovered
+P0050,2/14/2026,Kiambu,Thika,F003,Female,54,Malaria,Yes,15267,Private,Referred
+P0051,3/28/2026,Machakos,Machakos Town,F006,Female,62,Malaria,No,11284,Private,Recovered
+P0052,1/16/2026,Nakuru,Molo,F005,Female,56,Hypertension,Yes,14242,Private,Recovered
+P0053,2/27/2026,Nakuru,Molo,F005,Male,80,Tuberculosis,Yes,14411,None,Recovered
+P0054,2/5/2026,Nairobi,Westlands,F002,Male,7,Diabetes,No,12226,SHA,Recovered
+P0055,2/25/2026,Kisumu,Seme,F004,Female,11,Hypertension,Yes,19175,SHA,Deceased
+P0056,3/25/2026,Kisumu,Kisumu East,F004,Male,4,Pneumonia,Yes,2167,None,Recovered
+P0057,1/19/2026,Kiambu,Ruiru,F003,Female,90,Diabetes,No,6998,None,Recovered
+P0058,3/4/2026,Nairobi,Westlands,F002,Male,40,Tuberculosis,No,14497,None,Recovered
+P0059,3/4/2026,Machakos,Machakos Town,F006,Female,88,Tuberculosis,Yes,20044,Unknown,Recovered
+P0060,3/3/2026,Nakuru,Molo,F005,Female,2,Hypertension,No,4958,Private,Referred
+P0061,1/14/2026,Nakuru,Molo,F005,Female,79,Tuberculosis,No,16732,Private,Recovered
+P0062,1/28/2026,Machakos,Mwala,F006,Male,36,Hypertension,Yes,16727,None,Recovered
+P0063,2/16/2026,Nakuru,Nakuru Town,F005,Male,63,Pneumonia,No,9965,Private,Recovered
+P0064,1/18/2026,Machakos,Machakos Town,F006,Male,11,Pneumonia,No,17509,None,Recovered
+P0065,1/15/2026,Nakuru,Molo,F005,Male,38,Pneumonia,No,24168,SHA,Recovered
+P0066,3/18/2026,Machakos,Mwala,F006,Female,55,Maternal Health,No,13028,None,Recovered
+P0067,3/4/2026,Kisumu,Seme,F004,Male,41,Malaria,Yes,7776,SHA,Recovered
+P0068,1/4/2026,Kisumu,Nyando,F004,Female,30,Diabetes,Yes,11404,SHA,Recovered
+P0069,3/2/2026,Kiambu,Ruiru,F003,Female,90,Pneumonia,No,4861,SHA,Recovered
+P0070,1/11/2026,Nakuru,Nakuru Town,F005,Male,33,Hypertension,Yes,3641,Private,Recovered
+P0071,1/5/2026,Machakos,Machakos Town,F006,Female,11,Pneumonia,Yes,19786,Private,Recovered
+P0072,2/15/2026,Machakos,Athi River,F006,Female,76,Hypertension,No,20132,None,Recovered
+P0073,3/9/2026,Nairobi,Westlands,F001,Male,21,Pneumonia,Yes,19587,SHA,Recovered
+P0074,1/10/2026,Nakuru,Nakuru Town,F005,Male,37,Maternal Health,No,24535,Private,Recovered
+P0075,1/14/2026,Kiambu,Ruiru,F003,Male,83,Pneumonia,No,6160,SHA,Recovered
+P0076,1/15/2026,Kisumu,Nyando,F004,Female,89,Diabetes,No,10420,None,Recovered
+P0077,3/14/2026,Nakuru,Naivasha,F005,Female,78,Diabetes,Yes,4492,SHA,Referred
+P0078,3/25/2026,Machakos,Machakos Town,F006,Female,74,Malaria,Yes,16917,None,Recovered
+P0079,2/21/2026,Kisumu,Kisumu East,F004,Male,61,Diabetes,No,12421,Private,Recovered
+P0080,2/23/2026,Kiambu,Ruiru,F003,Female,85,Hypertension,Yes,16403,SHA,Recovered
+P0081,3/28/2026,Kisumu,Kisumu East,F004,Male,85,Tuberculosis,No,15041,SHA,Recovered
+P0082,2/21/2026,Kisumu,Nyando,F004,Male,27,Diabetes,Yes,10938,Private,Recovered
+P0083,3/21/2026,Nakuru,Naivasha,F005,Male,21,Diabetes,Yes,19596,Private,Recovered
+P0084,1/21/2026,Nairobi,Embakasi,F001,Female,38,Tuberculosis,No,15114,Private,Deceased
+P0085,1/13/2026,Kiambu,Ruiru,F003,Male,9,Diabetes,No,12637,None,Recovered
+P0086,3/27/2026,Nairobi,Embakasi,F002,Female,20,Hypertension,No,12809,Private,Recovered
+P0087,1/11/2026,Machakos,Mwala,F006,Male,74,Hypertension,Yes,14960,SHA,Recovered
+P0088,3/13/2026,Nakuru,Molo,F005,Male,64,Malaria,Yes,17959,None,Recovered
+P0089,2/17/2026,Nairobi,Embakasi,F001,Male,19,Hypertension,Yes,3951,Private,Recovered
+P0090,1/21/2026,Kisumu,Seme,F004,Female,87,Tuberculosis,No,11876,None,Recovered
+P0091,1/20/2026,Nakuru,Molo,F005,Male,81,Maternal Health,No,8954,None,Recovered
+P0092,1/15/2026,Nairobi,Kasarani,F001,Female,4,Malaria,No,3338,Private,Recovered
+P0093,2/17/2026,Nakuru,Naivasha,F005,Male,22,Pneumonia,Yes,21471,Private,Recovered
+P0094,2/8/2026,Kiambu,Ruiru,F003,Female,59,Diabetes,Yes,16745,Private,Recovered
+P0095,3/12/2026,Kiambu,Thika,F003,Female,82,Hypertension,No,16469,Private,Recovered
+P0096,2/8/2026,Nakuru,Nakuru Town,F005,Female,74,Diabetes,No,2218,None,Recovered
+P0097,3/20/2026,Nairobi,Kasarani,F001,Female,37,Pneumonia,No,8676,None,Recovered
+P0098,1/21/2026,Kisumu,Nyando,F004,Male,40,Hypertension,Yes,20491,Private,Recovered
+P0099,2/24/2026,Nairobi,Embakasi,F002,Male,26,Pneumonia,No,18894,None,Referred
+P0100,2/26/2026,Kiambu,Ruiru,F003,Female,15,Hypertension,Yes,6112,SHA,Recovered
+P0101,2/3/2026,Nakuru,Molo,F005,Male,34,Tuberculosis,Yes,16402,Private,Recovered
+P0102,3/27/2026,Kisumu,Nyando,F004,Female,14,Maternal Health,Yes,16949,SHA,Recovered
+P0103,1/21/2026,Machakos,Mwala,F006,Female,90,Diabetes,No,5323,SHA,Recovered
+P0104,1/4/2026,Nairobi,Embakasi,F002,Male,69,Pneumonia,No,16364,Private,Recovered
+P0105,3/14/2026,Machakos,Mwala,F006,Male,63,Tuberculosis,No,10666,SHA,Recovered
+P0106,2/8/2026,Kiambu,Ruiru,F003,Male,88,Diabetes,No,3484,Private,Recovered
+P0107,1/22/2026,Nairobi,Embakasi,F001,Male,7,Diabetes,Yes,5626,None,Recovered
+P0108,1/27/2026,Machakos,Athi River,F006,Female,19,Tuberculosis,Yes,10585,SHA,Deceased
+P0109,3/4/2026,Machakos,Mwala,F006,Male,17,Malaria,No,9296,None,Recovered
+P0110,3/5/2026,Kiambu,Ruiru,F003,Female,68,Malaria,Yes,17105,Private,Recovered
+P0111,3/15/2026,Machakos,Machakos Town,F006,Male,79,Malaria,No,16509,None,Referred
+P0112,3/14/2026,Nairobi,Embakasi,F002,Male,63,Maternal Health,No,3908,SHA,Recovered
+P0113,3/9/2026,Kiambu,Thika,F003,Female,49,Tuberculosis,No,16367,None,Recovered
+P0114,3/28/2026,Nairobi,Kasarani,F001,Male,56,Hypertension,Yes,15059,Private,Recovered
+P0115,2/11/2026,Nakuru,Nakuru Town,F005,Female,86,Diabetes,No,6501,None,Referred
+P0116,2/3/2026,Nairobi,Westlands,F001,Male,48,Pneumonia,Yes,20717,None,Recovered
+P0117,3/28/2026,Nairobi,Embakasi,F002,Female,7,Diabetes,No,13022,SHA,Recovered
+P0118,1/8/2026,Kiambu,Thika,F003,Female,72,Diabetes,Yes,10628,None,Recovered
+P0119,3/20/2026,Nakuru,Molo,F005,Female,4,Pneumonia,No,24526,Private,Referred
+P0120,1/28/2026,Kisumu,Kisumu East,F004,Female,9,Pneumonia,Yes,4506,None,Recovered
+P0121,1/11/2026,Nakuru,Nakuru Town,F005,Female,40,Maternal Health,No,20098,None,Recovered
+P0122,3/25/2026,Nairobi,Westlands,F001,Male,87,Malaria,No,16019,None,Recovered
+P0123,1/9/2026,Machakos,Mwala,F006,Male,45,Hypertension,Yes,10781,None,Recovered
+P0124,1/2/2026,Nakuru,Molo,F005,Female,77,Malaria,Yes,8198,Private,Referred
+P0125,1/11/2026,Kiambu,Ruiru,F003,Male,64,Maternal Health,No,7257,SHA,Recovered
+P0126,2/3/2026,Kiambu,Kiambu,F003,Male,56,Malaria,No,4051,Private,Recovered
+P0127,1/10/2026,Machakos,Mwala,F006,Female,3,Diabetes,Yes,21754,Private,Recovered
+P0128,1/28/2026,Kisumu,Kisumu East,F004,Male,56,Tuberculosis,No,18669,SHA,Recovered
+P0129,2/8/2026,Kisumu,Nyando,F004,Male,10,Tuberculosis,Yes,18886,None,Recovered
+P0130,1/8/2026,Kisumu,Seme,F004,Male,33,Pneumonia,Yes,21239,SHA,Recovered
+P0131,3/15/2026,Nairobi,Westlands,F002,Female,88,Tuberculosis,No,22052,Private,Recovered
+P0132,2/21/2026,Nairobi,Embakasi,F002,Female,76,Malaria,No,18124,SHA,Recovered
+P0133,2/12/2026,Nakuru,Naivasha,F005,Male,83,Malaria,No,16662,None,Recovered
+P0134,3/11/2026,Nairobi,Embakasi,F001,Female,65,Pneumonia,Yes,16262,SHA,Recovered
+P0135,3/17/2026,Kisumu,Nyando,F004,Male,6,Pneumonia,No,15898,None,Recovered
+P0136,2/10/2026,Kiambu,Ruiru,F003,Female,44,Maternal Health,Yes,22172,None,Recovered
+P0137,2/10/2026,Kisumu,Kisumu East,F004,Male,43,Malaria,Yes,12962,Private,Referred
+P0138,3/10/2026,Nakuru,Naivasha,F005,Female,83,Diabetes,Yes,23458,None,Recovered
+P0139,2/17/2026,Machakos,Athi River,F006,Male,47,Diabetes,Yes,8518,Private,Referred
+P0140,1/5/2026,Nakuru,Naivasha,F005,Male,38,Malaria,Yes,23190,Private,Recovered
+P0141,1/5/2026,Machakos,Athi River,F006,Male,89,Tuberculosis,Yes,15841,SHA,Recovered
+P0142,3/25/2026,Kiambu,Ruiru,F003,Female,30,Tuberculosis,Yes,11640,Private,Referred
+P0143,2/15/2026,Kiambu,Ruiru,F003,Female,65,Tuberculosis,No,6810,SHA,Recovered
+P0144,2/21/2026,Kiambu,Ruiru,F003,Female,71,Malaria,Yes,10840,SHA,Recovered
+P0145,2/27/2026,Kisumu,Seme,F004,Male,29,Hypertension,No,2373,Private,Recovered
+P0146,1/13/2026,Machakos,Mwala,F006,Female,29,Malaria,No,4746,None,Recovered
+P0147,2/10/2026,Kiambu,Thika,F003,Male,61,Hypertension,Yes,4096,SHA,Recovered
+P0148,2/4/2026,Kiambu,Kiambu,F003,Male,39,Malaria,Yes,9313,Private,Recovered
+P0149,2/4/2026,Machakos,Mwala,F006,Male,81,Tuberculosis,Yes,6204,Private,Recovered
+P0150,2/19/2026,Machakos,Mwala,F006,Male,86,Maternal Health,Yes,18653,Private,Recovered
+P0151,2/13/2026,Machakos,Machakos Town,F006,Male,82,Hypertension,No,9811,None,Recovered
+P0152,3/24/2026,Nairobi,Embakasi,F001,Male,75,Maternal Health,No,5871,SHA,Recovered
+P0153,3/27/2026,Kisumu,Nyando,F004,Female,90,Hypertension,Yes,5918,SHA,Recovered
+P0154,1/7/2026,Nakuru,Naivasha,F005,Male,6,Diabetes,No,18388,Private,Deceased
+P0155,3/2/2026,Machakos,Mwala,F006,Male,37,Diabetes,Yes,22987,Private,Recovered
+P0156,2/24/2026,Kisumu,Seme,F004,Female,44,Pneumonia,No,24177,Private,Recovered
+P0157,2/24/2026,Machakos,Mwala,F006,Male,56,Tuberculosis,Yes,19374,Private,Recovered
+P0158,2/10/2026,Nairobi,Embakasi,F002,Female,22,Maternal Health,No,13019,Private,Recovered
+P0159,3/9/2026,Kisumu,Nyando,F004,Male,10,Maternal Health,No,13404,None,Recovered
+P0160,3/28/2026,Kiambu,Thika,F003,Female,5,Pneumonia,Yes,9233,None,Recovered
+P0161,1/20/2026,Nakuru,Molo,F005,Female,48,Diabetes,No,4019,None,Recovered
+P0162,2/21/2026,Kisumu,Seme,F004,Male,15,Malaria,Yes,17852,None,Recovered
+P0163,2/25/2026,Machakos,Athi River,F006,Female,28,Tuberculosis,No,24240,Private,Recovered
+P0164,3/6/2026,Kiambu,Thika,F003,Female,12,Maternal Health,No,23383,Private,Recovered
+P0165,1/10/2026,Machakos,Machakos Town,F006,Male,47,Tuberculosis,Yes,5476,SHA,Recovered
+P0166,3/12/2026,Kiambu,Ruiru,F003,Female,60,Tuberculosis,Yes,21552,SHA,Recovered
+P0167,2/17/2026,Nakuru,Molo,F005,Female,74,Malaria,Yes,11888,None,Recovered
+P0168,3/5/2026,Nakuru,Molo,F005,Male,17,Hypertension,Yes,5568,None,Recovered
+P0169,1/23/2026,Kiambu,Thika,F003,Female,67,Diabetes,Yes,9711,SHA,Recovered
+P0170,2/21/2026,Machakos,Mwala,F006,Male,65,Maternal Health,Yes,20892,None,Recovered
+P0171,3/27/2026,Machakos,Machakos Town,F006,Male,4,Malaria,Yes,22519,None,Recovered
+P0172,3/20/2026,Kiambu,Kiambu,F003,Male,64,Maternal Health,No,22534,Private,Recovered
+P0173,3/3/2026,Nakuru,Nakuru Town,F005,Male,21,Hypertension,No,17367,Private,Recovered
+P0174,3/28/2026,Machakos,Athi River,F006,Female,45,Hypertension,Yes,13641,None,Recovered
+P0175,2/4/2026,Kisumu,Kisumu East,F004,Female,32,Pneumonia,Yes,3158,Private,Referred
+P0176,1/28/2026,Machakos,Mwala,F006,Female,74,Maternal Health,No,7720,SHA,Recovered
+P0177,2/10/2026,Machakos,Mwala,F006,Male,12,Hypertension,No,9388,SHA,Recovered
+P0178,3/16/2026,Nairobi,Westlands,F002,Female,37,Tuberculosis,Yes,5022,Private,Recovered
+P0179,2/25/2026,Kisumu,Nyando,F004,Female,6,Hypertension,Yes,20186,None,Recovered
+P0180,3/13/2026,Machakos,Mwala,F006,Female,71,Diabetes,Yes,5716,SHA,Recovered
+P0181,1/25/2026,Kisumu,Nyando,F004,Male,78,Tuberculosis,No,17886,SHA,Recovered
+P0182,2/26/2026,Kiambu,Kiambu,F003,Female,20,Tuberculosis,Yes,12246,None,Recovered
+P0183,2/19/2026,Nakuru,Molo,F005,Female,73,Diabetes,No,2045,Private,Recovered
+P0184,3/26/2026,Nairobi,Embakasi,F002,Male,77,Hypertension,No,22982,None,Recovered
+P0185,3/6/2026,Nairobi,Kasarani,F002,Female,19,Maternal Health,Yes,2534,None,Referred
+P0186,2/15/2026,Nairobi,Westlands,F001,Female,20,Hypertension,Yes,14947,None,Recovered
+P0187,1/23/2026,Nakuru,Molo,F005,Male,72,Diabetes,No,18718,Private,Recovered
+P0188,2/18/2026,Kiambu,Ruiru,F003,Female,79,Hypertension,Yes,9577,Private,Recovered
+P0189,1/23/2026,Kiambu,Ruiru,F003,Female,41,Hypertension,No,19866,None,Recovered
+P0190,2/13/2026,Nairobi,Kasarani,F002,Male,38,Malaria,No,24900,SHA,Recovered
+P0191,2/24/2026,Nakuru,Molo,F005,Male,26,Tuberculosis,No,19916,None,Recovered
+P0192,1/8/2026,Nairobi,Kasarani,F001,Male,82,Pneumonia,Yes,4783,Private,Recovered
+P0193,3/1/2026,Nakuru,Naivasha,F005,Male,53,Maternal Health,No,17145,None,Recovered
+P0194,1/21/2026,Kisumu,Seme,F004,Male,84,Tuberculosis,Yes,19035,None,Recovered
+P0195,1/27/2026,Nairobi,Westlands,F002,Male,51,Hypertension,Yes,10985,SHA,Recovered
+P0196,2/11/2026,Machakos,Machakos Town,F006,Female,83,Tuberculosis,No,5897,None,Recovered
+P0197,3/6/2026,Kiambu,Thika,F003,Female,83,Diabetes,Yes,1961,None,Recovered
+P0198,3/6/2026,Kisumu,Nyando,F004,Female,55,Tuberculosis,No,4342,Private,Recovered
+P0199,1/11/2026,Kiambu,Thika,F003,Male,34,Hypertension,Yes,16138,Private,Referred
+P0200,3/9/2026,Kisumu,Nyando,F004,Female,89,Pneumonia,Yes,23382,SHA,Recovered
