@@ -24,12 +24,12 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 **2. Exploratory & Descriptive Analysis**
 ### Treatment Cost
 - Overall average: **KES 13,290** (range: KES 1,555 – 24,900)
-![Average Costs](average_costs.png)
+![Average Costs](Images/average_costs.png)
 - Highest average cost by county: **Nakuru (KES 14,723)**
 - Lowest average cost by county: **Nairobi (KES 12,699)**
-![County Treatment Costs](county_average_costs.png)
+![County Treatment Costs](Images/county_average_costs.png)
 - Maternal Health has the highest average cost by disease (KES 14,873); Diabetes the lowest (KES 11,189).
-![Disease Average Costs](disease_average_costs.png)
+![Disease Average Costs](Images/disease_average_costs.png)
 
 ### Outcomes
 - **89% Recovered**, **9% Referred**, **2% Deceased** (4 patients total)
@@ -41,7 +41,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 - Unknown insurance coverage may include cash-paying patients, but the dataset lacks a payment-method field to confirm this.
 ### Visit Volume
 - Stable across the three-month window: 64 (Jan), 68 (Feb), 66 (Mar) — no strong seasonal signal in this timeframe.
-![Patient Volume](volume.png)
+![Patient Volume](Images/volume.png)
 
 ---
 
@@ -68,4 +68,4 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 Several data quality issues (detailed above) indicate it is not a verified real-world clinical dataset. Analysis and recommendations should be read as a demonstration of methodology, not as public health findings.
 ---
 ### Dashboard
-![Overview Dashboard](overview.png)
+![Overview Dashboard](Images/overview.png)
