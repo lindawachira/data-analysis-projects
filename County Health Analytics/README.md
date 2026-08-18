@@ -17,8 +17,9 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 
 **1. Data Cleaning & Quality Assessment**
 - Checked for missing values, duplicate records, and inconsistent categorical entries.
-- Identified a duplicate `Patient ID` (P0005) assigned to two different visit records — flagged rather than silently dropped, since both rows contain distinct, plausible data.
-- Consolidated inconsistent missing-value representations in the `Insurance` column into a single `Unknown` category.
+- Removed row whose age was 150, it was an outlier.
+- Standardized date column into appropriate format and data type
+- Identified a duplicate `Patient ID` (P0005) is assigned to two different visit records. I flagged rather than silently dropped, since both rows contain distinct, plausible data.
 - Flagged implausible Gender/Age vs. Disease combinations, since "fixing" fabricated data would misrepresent the analysis as more reliable than it is.
 
 **2. Exploratory & Descriptive Analysis**
