@@ -19,7 +19,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 - Checked for missing values, duplicate records, and inconsistent categorical entries.
 - Removed a row where age was 150 because it was a clear outlier.
 - Standardized date column into appropriate format and data type.
-- Identified a duplicate Patient_ID) assigned to two different visit records. Flagged rather than silently dropped, since both rows contained distinct, plausible data.
+- Identified a duplicate Patient_ID assigned to two different visit records. Flagged rather than silently dropped, since both rows contained distinct, plausible data.
 - Flagged male "Maternal Health" cases as errors instead of changing them, so as not to make the data look better than it actually is.
 
 **2. Exploratory & Descriptive Analysis**
