@@ -34,6 +34,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 ![County Treatment Costs](Images/county_average_costs.png)
 - Highest average cost by disease: **Maternal Health (KES 14,873)**
 - Lowest average cost by disease: **Diabetes (KES 11,189)**
+  
 ![Disease Average Costs](Images/disease_average_costs.png)
 
 
