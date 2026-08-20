@@ -56,7 +56,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 ### Insurance Coverage
 - **Insurance distribution:** None (70), Private (72), SHA (55), Unknown (1)
 - Privately insured patients have the highest total treatment cost (KES 1,008,386) vs. SHA-covered patients (KES 673,322)
-- 36% of records (70 patients) had no insurance status recorded—the largest data gap
+- 36% of records (70 patients) had no insurance status recorded
 - Unknown insurance may include cash-paying patients, but the dataset lacks a payment-method field to confirm
 
 ## Recommendations
