@@ -41,7 +41,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 ### Patient Demographics
 - **Total patients:** 198 (101 male, 97 female)
 - **County distribution:** Kiambu (40), Kisumu (34), Machakos (43), Nairobi (41), Nakuru (40)
-- **Monthly volume:** Jan (64), Feb (68), Mar (66)—stable, no strong seasonal signal
+- **Monthly volume:** Jan (64), Feb (68), Mar (66): stable, no strong seasonal signal
 
 ![Patient Volume](Images/volume.png)
 
