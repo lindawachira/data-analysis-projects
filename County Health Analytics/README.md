@@ -74,3 +74,5 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 ## Data Note
 Several data quality issues (detailed above) indicate this is not a verified real-world clinical dataset. Analysis and recommendations should be read as a demonstration of methodology, not as public health findings.
 
+![Dashboard](Images/overview.png)
+![Pivot Tables](Images/pivottables.png)
