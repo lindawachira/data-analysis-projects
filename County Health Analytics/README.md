@@ -7,7 +7,7 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 **Key findings:**
 - Tuberculosis (40 cases) and Hypertension (39 cases) are the two highest-burden conditions, together accounting for 40% of all visits.
 - Overall recovery rate is 89%, with Tuberculosis carrying the highest mortality rate at 5% (2 of 40 cases).
-- Nakuru has the highest average treatment cost (KES 14,723) while Nairobi has the lowest (KES 12,699)—a 16% difference.
+- Nakuru has the highest average treatment cost (KES 14,723) while Nairobi has the lowest (KES 12,699) making a 16% difference.
 - Maternal Health has the highest average treatment cost per disease (KES 14,873), while Diabetes has the lowest (KES 11,189).
 - Admission rate is nearly split: 50.5% admitted, 49.5% not admitted.
 - Over a third of records (36%) have no insurance status recorded, representing the largest data gap in the dataset.
@@ -17,10 +17,10 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 
 **1. Data Cleaning & Quality Assessment**
 - Checked for missing values, duplicate records, and inconsistent categorical entries.
-- Removed a row where age was 150—it was a clear outlier.
+- Removed a row where age was 150 because it was a clear outlier.
 - Standardized date column into appropriate format and data type.
-- Identified a duplicate `Patient ID` (P0005) assigned to two different visit records. Flagged rather than silently dropped, since both rows contained distinct, plausible data.
-- Flagged implausible Gender/Disease combinations (male "Maternal Health" cases)—since "fixing" fabricated data would misrepresent the analysis as more reliable than it is.
+- Identified a duplicate Patient_ID) assigned to two different visit records. Flagged rather than silently dropped, since both rows contained distinct, plausible data.
+- Flagged male "Maternal Health" cases as errors instead of changing them, so as not to make the data look better than it actually is.
 
 **2. Exploratory & Descriptive Analysis**
 **Tools used:** Microsoft Excel (PivotTables, PivotCharts, Power Query)
@@ -61,14 +61,14 @@ This project analyzes 198 patient visit records across five Kenyan counties (Nai
 
 ## Recommendations
 
-1. **Strengthen data validation at collection.** Cross-field checks (e.g., Disease vs. Gender logic) would catch entry errors before they reach analysis. This is critical if this pipeline is later applied to real patient data.
-2. **Standardize missing-value conventions** across all fields to avoid undercounting data gaps—especially for insurance status.
-3. **Investigate the Nakuru cost premium** against case severity mix and facility-level pricing to determine whether it reflects real cost drivers or a data artifact.
-4. **Close the insurance reporting gap**—prioritize capturing insurance status at intake, since it currently limits confidence in any cost-by-coverage analysis.
-5. **Prioritize Tuberculosis case management resources**, given it has both the highest case volume and the highest mortality rate in this sample.
-
+1. Strengthen data validation at collection. Cross-field checks (e.g., Disease vs. Gender logic) would catch entry errors before they reach analysis.
+2. Fix how missing data is recorded so we do not miss any gaps, especially for people without insurance.
+3. Check if Nakuru's higher prices are due to sicker patients or high hospital fees, or if the data is just wrong.
+4. Fix how insurance is recorded at the start to accurately analyze how different coverage plans affect health care costs.
+5. Put more resources into managing Tuberculosis because it has the most patients and the highest death rate
+   
 ## Next Steps
-- If applied to real data, validate against ground-truth clinical records before drawing operational conclusions.
+- If applied to real data, Double-check the data against real hospital records before drawing operational conclusions.
 - Explore age-group segmentation (pediatric / adult / elderly) against disease and outcome for a more granular view.
 - Investigate why admission rates vary so widely by disease—Hypertension (62%) vs. Maternal Health (32%).
 
