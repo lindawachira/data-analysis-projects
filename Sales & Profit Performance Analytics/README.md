@@ -32,8 +32,9 @@ Furniture generated $742K in sales but only a 2.5% profit margin, compared to 17
 **2. Discounts past 20% weren't earning loyalty.**
 
 ![Discount band vs profit](Images/Discount-vs-Profit.png)
+![Discount band vs profit](Images/discountNumbers.png)
 
-Every discount band above 20% showed negative average profit per order, with the 50%+ tier alone responsible for $76K in losses which was more than every other loss-making band combined.
+Every discount band above 20% showed negative average profit per order(over $135k total losses), with the 50%+ tier alone responsible for $76K in losses which was more than every other loss-making band combined.
 → *Recommendation:* Set a firm 20% discount cap, with senior approval required for anything beyond it.
 
 **3. Big risk losing a third of customers**
