@@ -39,64 +39,51 @@ SET order_date = STR_TO_DATE(@order_date_raw, '%c/%e/%Y'),
     ship_date  = STR_TO_DATE(@ship_date_raw, '%c/%e/%Y');
 SELECT * FROM supply_chain;
 
--- DATA NORMALIZATION
--- Customers Table
-CREATE TABLE customers (
-    customer_id   VARCHAR(20) PRIMARY KEY,
-    customer_name VARCHAR(100) NOT NULL,
-    segment       VARCHAR(20) NOT NULL
-);
-INSERT INTO customers (customer_id, customer_name, segment)
-SELECT DISTINCT customer_id, customer_name, segment
+-- Analysis
+-- summary statistics
+SELECT COUNT(*) AS `Line Items`, COUNT(DISTINCT order_id) AS `Total Orders`, SUM(sales) AS Revenue, SUM(profit) AS `Gross Profit`, 
+SUM(profit)/SUM(sales)*100 AS `Gross Margin(%)`, AVG(discount) AS `Average Discount`
 FROM supply_chain;
+/* Looking at the results, the company generated high volume sales of $2.3M but gross profits remained relatively low with
+only $284K (gross margin of 12.45%). Discount rates average to 15.6% (16%), already signaling a wavering financial health.
+I will go through a series of steps to find the root cause of this margin decay	
+*/
+-- 1. Investigating discounts
+WITH discount_band_cte AS (
+	SELECT *,
+    CASE 
+        WHEN discount = 0 THEN '0%'
+        WHEN discount <= 0.1 THEN '1-10%'
+        WHEN discount <= 0.2 THEN '11-20%'
+        WHEN discount <= 0.3 THEN '21-30%'
+        WHEN discount <= 0.4 THEN '31-40%'
+        WHEN discount <= 0.5 THEN '41-50%'
+        ELSE '50%+'
+    END AS discount_band
+	FROM supply_chain
+)SELECT 
+    discount_band, 
+    COUNT(DISTINCT order_id) AS loss_making_orders,
+    SUM(sales) AS revenue_lost_on,
+    SUM(profit) AS total_leakage -- This will output the negative cash bleed
+FROM discount_band_cte 
+WHERE profit < 0 
+  AND discount <= 0.20 -- Explicitly isolating "safe" discount tiers
+GROUP BY discount_band
+ORDER BY MAX(discount);
+/*By banding the discount into 7 tiers, it is clear to see where to place a threshhold at discounts(notably 20%).
+The analysis shows that every discount after 20% only generates losses,with the worse one being tier 50%+ with -$76,559,
+which is more than tier 21-50% combined(-$10,357 - $25,448 - $22,999 = -$58,804).
+This calls for investigation to find out which dimensions contributed to the margin decay.
+*/
 
--- Products Table
-CREATE TABLE products (
-    product_key   INT AUTO_INCREMENT PRIMARY KEY,
-    product_id    VARCHAR(20) NOT NULL,
-    product_name  VARCHAR(200) NOT NULL,
-    category      VARCHAR(30) NOT NULL,
-    sub_category  VARCHAR(30) NOT NULL,
-    UNIQUE KEY uq_product (product_id, product_name)
-);
-INSERT INTO products (product_id, product_name, category, sub_category)
-SELECT DISTINCT product_id, product_name, category, sub_category
-FROM supply_chain;
+/* While we have the total profit accounted for, scanning the dataset shows that there are orders that brought in profits
+and those that did not(orders with negative zero profits). We have a total of over $156,000 in losses(18.7% unprofitable margin)
+*/
 
--- Orders Table
-CREATE TABLE orders (
-    row_id        INT PRIMARY KEY,
-    order_id      VARCHAR(20) NOT NULL,
-    order_date    DATE NOT NULL,
-    ship_date     DATE NOT NULL,
-    ship_mode     VARCHAR(20) NOT NULL,
-    customer_id   VARCHAR(20) NOT NULL,
-    product_id    VARCHAR(20) NOT NULL,
-    city          VARCHAR(50) NOT NULL,
-    state         VARCHAR(50) NOT NULL,
-    postal_code   VARCHAR(10) NOT NULL,
-    region        VARCHAR(20) NOT NULL,
-    sales_rep     VARCHAR(100) NOT NULL,
-    returned      VARCHAR(5)  NOT NULL,
-    sales         DECIMAL(10,4) NOT NULL,
-    quantity      INT NOT NULL,
-    discount      DECIMAL(4,2) NOT NULL,
-    profit        DECIMAL(10,4) NOT NULL,
-    CONSTRAINT fk_orders_customer
-        FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
-    CONSTRAINT fk_orders_product
-        FOREIGN KEY (product_id) REFERENCES products(product_id)
-);
-INSERT INTO orders (row_id, order_id, order_date, ship_date, ship_mode,
-                     customer_id, product_id, city, state, postal_code, region,
-                     sales_rep, returned, sales, quantity, discount, profit)
-SELECT row_id, order_id, order_date, ship_date, ship_mode,
-       customer_id, product_id, city, state, 
-       LPAD(postal_code, 5, '0'),  -- fixes the leading-zero truncation issue
-       region, sales_rep, returned, sales, quantity, discount, profit
-FROM supply_chain;
 
--- EDA(Exploratory Data Analysis)
+SELECT COUNT(*), COUNT(DISTINCT order_id) FROM supply_chain;
+
 SELECT * FROM supply_chain;
 /* This section looks at the sales representatives performance by number of sales, profit they brought in, profit margins,
 and average discount
@@ -105,46 +92,88 @@ SELECT sales_rep, SUM(sales) AS total_sales, SUM(profit) AS total_profit,
 SUM(profit)/SUM(sales)*100 AS profit_margin_pct, AVG(discount) AS avg_discount
 FROM supply_chain
 GROUP BY sales_rep;
+
+/* Looking at yearly performance of our sales reps, Anna Andreadi and Chuck Magee are consistently strong across all four years. 
+Kelly Wiliams, however, is a red flag, particularly in the 2014 numbers where $103,838 are in sales but only $540 in profit leading
+to a 0.52% margin. The same year Kelly also drove a 26% average discount in sales, which may have led to the profit decline. 
+This accurately highlights high sales low profits due to these kinds of discounting.
+*/
 SELECT YEAR(order_date) AS `year`, sales_rep, SUM(sales) AS total_sales, SUM(profit) AS total_profit, 
 SUM(profit)/SUM(sales)*100 AS profit_margin_pct, AVG(discount) AS avg_discount
 FROM supply_chain
 GROUP BY sales_rep, YEAR(order_date)
 ORDER BY `year`, sales_rep;
 
+-- Sales and profit by category
+SELECT category, SUM(sales) AS Total_Sales, SUM(profit) AS Total_profits, SUM(profit)/SUM(sales)*100 AS profit_margin_pct
+FROM supply_chain
+GROUP BY category;
+
+/* Based on previous analysis, furniture appears to be dramatically underperforming despite huge sales, with only a 2.5% 
+profit margin. Digging deeper, this flaw is caused by the tables sub category that huge sales but very low profit
+causing a staggering -8.6% profit margin, followed by bookcases with a -3% profit margin. It is clear that tables and bookcases are 
+costing the company money.
+*/
+SELECT sub_category, SUM(sales), SUM(profit), SUM(profit)/SUM(sales)*100 AS profit_margin_pct
+FROM supply_chain
+WHERE category = 'Furniture'
+GROUP BY sub_category;
+
+/*technology category is leading with a 17.4% profit margin, with the copiers sub category hiking this margin with a stunning 37.2%
+followed by accessories with 25.1%. What follows after technology is office supplies category that has some incredible margin performances from:
+envelopes with 42.3%, paper with 43.4% and lables with 44.4%. The only thing costing this category money is the supplies sub category
+with a -2.5% margin
+*/
+SELECT category, sub_category, SUM(sales), SUM(profit), SUM(profit)/SUM(sales)*100 AS profit_margin_pct
+FROM supply_chain
+WHERE category IN('Technology', 'Office Supplies')
+GROUP BY category, sub_category
+ORDER BY category;
+
+
 /* This next section aims to explore sales, profit and profit margin performance highlighting top 5 regions and cities, while also
 comparing their performance per year
 */
-SELECT state, SUM(sales) AS total_sales -- top 5 states by total sales
+/* Top 5 states by total sales vs their total profits
+California and New York are doing incredibly well in both sales and profits. One issue noted, however, is that Texas looks good in sales 
+view(ranks top 3) but is instead showing big losses(-$25729.29) presumably because of the 37% average discount on items. The same goes for
+Pennsylvania which shows $15560 in losses(32% average discount)
+*/
+SELECT state, SUM(sales) AS total_sales, SUM(profit) AS total_profit, AVG(discount)  
 FROM supply_chain
 GROUP BY state
 ORDER BY total_sales DESC
 LIMIT 5;
+-- a deepdive on Texas state to view cities with lossess and their discounts(they range from 20% to 80%). 
+SELECT city, SUM(profit) AS total_profit, AVG(discount)
+FROM supply_chain
+WHERE state = 'Texas'
+GROUP BY city;
 
-SELECT state, SUM(profit) AS total_profit -- top 5 states by total profits
+-- top 5 states by total profits
+SELECT state, SUM(profit) AS total_profit, SUM(sales) AS total_sales 
 FROM supply_chain
 GROUP BY state
 ORDER BY total_profit DESC
 LIMIT 5;
-
-SELECT city, state, SUM(sales) AS total_sales -- top 5 cities by total sales
+-- top 5 cities by total sales
+SELECT city, state, SUM(sales) AS total_sales, SUM(profit) AS total_profit 
 FROM supply_chain
 GROUP BY city, state
 ORDER BY total_sales DESC
 LIMIT 5;
-
-SELECT city, state, SUM(profit) AS total_profit -- top 5 cities by total profits
+-- top 5 cities by total profits
+SELECT city, state, SUM(profit) AS total_profit, SUM(sales) AS total_sales 
 FROM supply_chain
 GROUP BY city, state
 ORDER BY total_profit DESC
 LIMIT 5;
 
 -- Top 5 states in total sales per year
-SELECT year, state, total_sales, sales_rank
+SELECT year, state, total_sales, total_profits, sales_rank
 FROM (
 		SELECT 
-				YEAR(order_date) AS year,
-				state,
-				SUM(sales) AS total_sales,
+				YEAR(order_date) AS year, state, SUM(sales) AS total_sales, SUM(profit) AS total_profits,
 				RANK() OVER (PARTITION BY YEAR(order_date) ORDER BY SUM(sales) DESC) AS sales_rank
 			FROM supply_chain
 			GROUP BY state, YEAR(order_date)
@@ -167,63 +196,32 @@ WHERE profit_rank <= 5
 ORDER BY year, profit_rank;
 
 -- top 5 cities per year
-SELECT year, city, state, total_sales, sales_rank
+SELECT year, city, state, total_profits, city_rank
 FROM (
     SELECT 
-        YEAR(order_date) AS year, city, state, SUM(sales) AS total_sales,
-        RANK() OVER (PARTITION BY YEAR(order_date) ORDER BY SUM(sales) DESC) AS sales_rank
+        YEAR(order_date) AS year, city, state, SUM(profit) AS total_profits,
+        RANK() OVER (PARTITION BY YEAR(order_date) ORDER BY SUM(profit) DESC) AS city_rank
     FROM supply_chain
     GROUP BY YEAR(order_date), city, state
 ) ranked
-WHERE sales_rank <= 5
-ORDER BY year, sales_rank;
-
--- top 5 cities in profits per year
-SELECT year, city, state, total_profit, profit_rank
-FROM (
-    SELECT 
-        YEAR(order_date) AS year, city, state, SUM(profit) AS total_profit,
-        RANK() OVER (PARTITION BY YEAR(order_date) ORDER BY SUM(profit) DESC) AS profit_rank
-    FROM supply_chain
-    GROUP BY YEAR(order_date), city, state
-) ranked
-WHERE profit_rank <= 5
-ORDER BY year, profit_rank;
+WHERE city_rank <= 5
+ORDER BY year, city_rank;
 
 -- Sales performance by year
-SELECT YEAR(order_date) AS `year`, SUM(sales) AS Total_Sales
+SELECT YEAR(order_date) AS `year`, SUM(sales) AS Total_Sales, SUM(profit) AS Total_profits, SUM(profit) / SUM(sales) * 100 AS profit_margin_pct,
+AVG(discount)*100 AS avg_discount_pct
 FROM supply_chain
 GROUP BY `year`
 ORDER BY `year`;
 
--- Yearly profits vs profit margin 
-SELECT YEAR(order_date) AS `year`, SUM(profit) AS total_profit, SUM(profit) / SUM(sales) * 100 AS profit_margin_pct
-FROM supply_chain
-GROUP BY `year`
-ORDER BY `year`;
-
--- Yearly sales, profit, profir margin and average disocunt performance
-SELECT YEAR(order_date) AS year,
-       SUM(sales) AS total_sales,
-       SUM(profit) AS total_profit,
-       SUM(profit)/SUM(sales)*100 AS profit_margin_pct,
-       AVG(discount)*100 AS avg_discount_pct
-FROM supply_chain
-GROUP BY year
-ORDER BY year;
-
--- Sales and profit by category
-SELECT category, SUM(sales), SUM(profit), SUM(profit)/SUM(sales)*100 AS profit_margin_pct
-FROM supply_chain
-GROUP BY category;
  -- sales and profits by region
 SELECT region, SUM(sales), SUM(profit)
 FROM supply_chain
 GROUP BY region;
 
--- Yearly regional performance
+-- Yearly regional performance: 
 SELECT YEAR(order_date) AS `year`, region, SUM(sales) AS total_sales, SUM(profit) AS total_profit,
-SUM(profit)/SUM(sales)*100 AS profit_margin_pct
+SUM(profit)/SUM(sales)*100 AS profit_margin_pct, AVG(discount)*100 AS avg_discount_pct
 FROM supply_chain
 GROUP BY `year`, region
 ORDER BY region, `year` ASC;
@@ -238,6 +236,9 @@ FROM (
 ) order_totals;
 
 -- 2.  AOV per year
+/* The AOV shows a trendy decline each year despite growth of sales. This may mean that growth is coming from many orders 
+and not bigger orders.
+*/
 SELECT YEAR(order_date) AS year, AVG(order_total) AS avg_order_value
 FROM (
     SELECT order_id, MIN(order_date) AS order_date, SUM(sales) AS order_total
@@ -246,6 +247,8 @@ FROM (
 ) order_totals
 GROUP BY YEAR(order_date)
 ORDER BY year;
+
+SELECT year(order_date), AVG(sales) AS AOV FROM supply_chain GROUP BY year(order_date);
 
 -- AOV per quarter 
 SELECT 
@@ -294,6 +297,7 @@ FROM (
 ) rfm_base;
 SELECT * FROM customer_rfm;
 
+CREATE VIEW rfm_segment AS
 SELECT *,
     CASE 
         WHEN r_score = 1 AND f_score = 1 AND m_score = 1 THEN 'Champions'
@@ -305,3 +309,9 @@ SELECT *,
     END AS rfm_segment
 FROM customer_rfm
 ORDER BY r_score, f_score, m_score;
+
+-- Number of customers per rfm segment: The highest number, 261 belong to the 'Lost/dormant' segment, while the 'Champions' are 35.
+SELECT rfm_segment, COUNT(*) AS customer_count,  SUM(monetary) AS total_revenue
+FROM rfm_segment
+GROUP BY rfm_segment
+ORDER BY customer_count DESC;
