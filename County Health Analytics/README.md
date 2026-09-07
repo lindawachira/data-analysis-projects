@@ -1,4 +1,4 @@
-# County Health Analysis: Diseases, Treatment Costs & Patient Outcomes Across 5 Kenyan Counties
+# County Health Analysis: Revenue Trends, Diseases, Treatment Outcomes Across 5 Kenyan Counties
 
 ## Executive Summary
 
